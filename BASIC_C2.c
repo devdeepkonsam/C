@@ -137,9 +137,21 @@ int main()
         else{
             printf("[%d].",e);
             e++;
-        }
-        
+        } 
     }
+    printf("\n");
+
+    //DO WHILE LOOP
+    //The do-while loop executes the loop statements before evaluating the expression to determine if the loop should be repeated
+    /*do {
+           statements
+        } while (expression);*/
+
+    do {
+        printf("[%d] ",e);
+            e--;
+    } while (e>0);
+
 
 
 
