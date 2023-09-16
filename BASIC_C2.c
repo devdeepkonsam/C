@@ -150,7 +150,35 @@ int main()
     do {
         printf("[%d] ",e);
             e--;
-    } while (e>0);
+    } while (e > 0);
+    printf("\n");
+
+    //BREAK AND CONTINUE STATEMENT
+    // break statement is use to exit from the while loop 
+    // continue statement is use the stay in the loop and skipping to next iterations
+    
+    int f = 5;
+    while(f <= 15){
+        if(f%1 == 0){
+            printf("%d ",f);
+            f++;
+            if(f == 12){
+                break;
+            }
+        }
+    }
+
+    printf("\n");
+
+
+
+    int g = 5;
+    while (g > 0) {
+        g--;             // **** if num was decremented after the continue statement an infinite loop would be created
+    if (g == 3)    
+       continue;
+    printf("%d\n", g);
+    }
 
 
 
