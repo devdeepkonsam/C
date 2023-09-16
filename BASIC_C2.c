@@ -190,6 +190,11 @@ int main()
         printf("%d ",h);
     }
     printf("\n");
+    
+    /* for loop can contain multiple expressions separated by commas in each part
+        for (x = 0, y = num; x < y; i++, y--) { 
+        statements; 
+        }*/
 
     //we can have nested for loop 
      
