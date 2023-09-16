@@ -182,8 +182,23 @@ int main()
 
     //========================================================================================================================//
     //FOR LOOP 
-    
+    // loop structure that execute the statment for fixed value
+    /* for (intial value, condition , increment or decrement){
+    }*/
 
+    for ( int h = 10 ; h > 0 ; h--){
+        printf("%d ",h);
+    }
+    printf("\n");
+
+    //we can have nested for loop 
+     
+     for(int i = 0 ; i < 5 ; i++){
+        for (int j = 1 ; j <= 5 ; j++){
+            printf("[%d],[%d]  ",i,j);
+        }
+        printf("\n");
+     }
 
     return 0;
 }
