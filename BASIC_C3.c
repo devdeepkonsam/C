@@ -3,9 +3,7 @@
 //When the parameter types and names are included in a declaration, the declaration is called a function prototype.
 int square(int num);  //declaration of function
 
-int sum (int a , int b){
-    return a +b;
-}
+int sum (int a , int b);
 
 int main()
 {
@@ -30,8 +28,15 @@ int main()
     int ans = sum(x,y);
     printf("%d\n",ans);
 
+}
 
-    //fuction parameter
+//definition of function 
+int square (int num){
+    int ans = num * num;
+    return ans;  // the return statement is to return the value 
+}
+
+//fuction parameter
     /*A function's parameters are used to receive values required by the function.
      Values are passed to these parameters as arguments through the function call. 
     By default, arguments are passed by value, which means that a copy of data is given to the parameters of the called function. 
@@ -39,11 +44,6 @@ int main()
     Arguments passed to a function are matched to parameters by position. 
     Therefore, the first argument is passed to the first parameter, the second to the second parameter, and so on.*/
 
-
-}
-
-//definition of function 
-int square (int num){
-    int ans = num * num;
-    return ans;  // the return statement is to return the value 
+int sum(int a, int b){
+    return a +b;
 }
