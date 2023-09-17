@@ -5,6 +5,8 @@ int square(int num);  //declaration of function
 
 int sum (int a , int b);
 
+int global = 0;
+
 int main()
 {
     // FUNCTION IN C 
@@ -28,6 +30,23 @@ int main()
     int ans = sum(x,y);
     printf("%d\n",ans);
 
+    // VARIABLE SCOPE 
+    //Variable scope refers to the visibility of variables within a program
+    //Variables declared in a function are local to that block of code and cannot be referred to outside the function : local1 and local2 
+    int local1 = 5,local2 = 100;
+
+    //Variables declared outside all functions are global to the entire program :global
+    //For example, constants declared with a #define at the top of a program are visible to the entire program
+    global = local1 + local2;
+    printf("%d",global);
+
+
+
+
+
+    //STATIC VARIABLE
+    
+
 }
 
 //definition of function 
@@ -47,3 +66,8 @@ int square (int num){
 int sum(int a, int b){
     return a +b;
 }
+//The values of x and y were passed to sum_up. 
+//Note that even though the value of parameter x was changed in sum_up
+//the value of argument x in main() was not changed because only its value was passed into the parameter x.
+
+
