@@ -5,6 +5,10 @@ int square(int num);  //declaration of function
 
 int sum (int a , int b);
 
+void hello();
+
+int factorial (int num);
+
 int global = 0;
 
 int main()
@@ -38,16 +42,31 @@ int main()
     //Variables declared outside all functions are global to the entire program :global
     //For example, constants declared with a #define at the top of a program are visible to the entire program
     global = local1 + local2;
-    printf("%d",global);
+    printf("%d\n",global);
 
+    //static variable the value in not destroyed when exited from the function is it stays where it was left when called again 
+    for(int i = 0;i<5;i++){
+        hello();
+    }
 
+    int fac = factorial(local1);
+    printf("%d",fac);
 
-
-
-    //STATIC VARIABLE
-    
 
 }
+
+//RECURSION FUNCTION
+//A recursive function is one that calls itself and includes a base case, or exit condition, for ending the recursive calls
+
+int factorial (int num){
+    if(num == 1)
+        return 1;
+    else
+    return num * (factorial(num-1));
+
+}
+
+    
 
 //definition of function 
 int square (int num){
@@ -69,5 +88,17 @@ int sum(int a, int b){
 //The values of x and y were passed to sum_up. 
 //Note that even though the value of parameter x was changed in sum_up
 //the value of argument x in main() was not changed because only its value was passed into the parameter x.
+
+
+
+//STATIC VARIABLE
+/*Static variables have a local scope but are not destroyed when a function is exited. 
+Therefore, a static variable retains its value for the life of the program and can be accessed every time the function is re-entered.*/
+
+void hello(){
+    static int num = 1;
+    printf("Hello World %d\n",num);
+    num++;
+}
 
 
