@@ -1,14 +1,11 @@
 #include <stdio.h>
-#include <string.h>
 
-int main(){
-    char str[100];
-    int i;
-    printf("Enter a string: ");
-    scanf("%s",string);
-    for(i=0:str[i]!='\0':i++){
-    }
-    printf("size of the string is %d",i);
-    
-    return 0;
+int main(void){
+    int n = 50 ;
+    int *p = &n; //variable p which is pointer get the address of the n 
+
+    printf("%d\n",n); //it print the value assigned to n 
+    printf("%p\n",&n); //it print the address of the n 
+    printf("%i\n",&n);
+    printf("%p\n",p);
 }
